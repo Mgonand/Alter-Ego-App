@@ -3,7 +3,9 @@ const Schema   = mongoose.Schema;
 
 const userSchema = new Schema({
   username: String,
-  password: String
+  password: String,
+  gamesCompleted:[{type:Schema.Types.ObjectId},]
+
 }, {
   timestamps: {
     createdAt: 'created_at',

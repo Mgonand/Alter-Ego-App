@@ -3,7 +3,6 @@ require('dotenv').config();
 const bodyParser = require('body-parser');
 const cookieParser = require('cookie-parser');
 const express = require('express');
-const favicon = require('serve-favicon');
 const mongoose = require('mongoose');
 const logger = require('morgan');
 const path = require('path');
@@ -65,7 +64,7 @@ require('./passport')(app);
 const authRouter = require('./routes/auth');
 const genericCrud = require('./routes/genericCRUD');
 app.use('/api/auth', authRouter);
-app.use('/api/news', genericCrud(require('./models/News')));
+app.use('/api/story', genericCrud(require('./models/Story')));
 app.use('/api/user', genericCrud(require('./models/User')));
 
 
