@@ -1,12 +1,13 @@
 const mongoose = require('mongoose');
 const Schema   = mongoose.Schema;
 
-const storySchema = new Schema({
+const chapterSchema = new Schema({
   title: String,
   text: String,
-  prevOption:{type:Schema.Types.ObjectId, ref:'Prev'},
-  option1:{type:Schema.Types.ObjectId, ref:'Op1'},
-  option2:{type:Schema.Types.ObjectId, ref:'Op1'},
+  prevOption:{type:Schema.Types.ObjectId, ref:'Chapter'},
+  options:[{type:Schema.Types.ObjectId, ref:'Chapter'}],
+  ref:Number,
+  originRef:Number,
   type:{type:String,enum:["starting","badEnding","goodEnding","midPoint"]}
 }, {
   timestamps: {
@@ -15,5 +16,5 @@ const storySchema = new Schema({
   }
 });
 
-const Story = mongoose.model('Story', storySchema);
-module.exports = Story;
+const Chapter = mongoose.model('Chapter', chapterSchema);
+module.exports = Chapter;

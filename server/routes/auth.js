@@ -8,10 +8,7 @@ const passport = require('passport');
 const login = (req, user) => {
   return new Promise((resolve,reject) => {
     req.login(user, err => {
-      console.log('req.login ')
-      console.log(user)
-
-      
+     
       if(err) {
         reject(new Error('Something went wrong'))
       }else{
@@ -21,18 +18,16 @@ const login = (req, user) => {
   })
 }
 
-
 // SIGNUP
 router.post('/signup', (req, res, next) => {
 
   const {username, password} = req.body;
 
-  console.log('username', username)
-  console.log('password', password)
-
   // Check for non empty user or password
   if (!username || !password){
-    next(new Error('You must provide valid credentials'));
+    // next(new Error('You must provide valid credentials'));
+    res.status(500).json({message:"'You must provide valid credentials'"});
+    return;
   }
 
   // Check if user exists in DB

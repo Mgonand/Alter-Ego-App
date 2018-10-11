@@ -1,10 +1,17 @@
 const mongoose = require('mongoose');
-const Schema   = mongoose.Schema;
+const Schema = mongoose.Schema;
 
 const userSchema = new Schema({
   username: String,
   password: String,
-  gamesCompleted:[{type:Schema.Types.ObjectId},]
+  gamesCompleted: [{
+    type: Schema.Types.ObjectId,ref:"Game"
+  }, ],
+  role: {
+    type: String,
+    enum : ['USER', 'ADMIN'],
+    default : 'USER'
+  }
 
 }, {
   timestamps: {

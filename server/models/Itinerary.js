@@ -2,11 +2,10 @@ const mongoose = require('mongoose');
 const Schema   = mongoose.Schema;
 
 const itinerarySchema = new Schema({
-  user: Schema.Types.ObjectId,
-  start: Schema.Types.ObjectId,
-  end: Schema.Types.ObjectId,
-  options:[{type:Schema.Types.ObjectId},],
-  numberOfOptions:this.options.length
+  user: {type: Schema.Types.ObjectId , ref:"User"},
+  start: {type: Schema.Types.ObjectId , ref:"Chapter"},
+  end: {type: Schema.Types.ObjectId , ref:"Chapter"},
+  options:[{type: Schema.Types.ObjectId , ref:"Chapter"}]
   
 }, {
   timestamps: {

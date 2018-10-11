@@ -62,11 +62,9 @@ require('./passport')(app);
 
 
 const authRouter = require('./routes/auth');
-const genericCrud = require('./routes/genericCRUD');
 app.use('/api/auth', authRouter);
-app.use('/api/story', genericCrud(require('./models/Story')));
-app.use('/api/user', genericCrud(require('./models/User')));
 
 
 
-module.exports = app;
+
+module.exports = app;  

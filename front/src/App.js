@@ -9,7 +9,6 @@ import Signup from "./components/auth/Signup";
 import Login from "./components/auth/Login";
 import AuthService from "./components/auth/AuthService";
 import Contents from "./components/contents/Contents";
-import Prueba from "./components/contents/prueba";
 
 class App extends Component {
   constructor(props) {
@@ -58,14 +57,7 @@ class App extends Component {
               userInSession={this.state.loggedInUser}
               logout={this.logout}
             />
-            <Switch>
-              <Route
-                exact
-                path="/signup"
-                render={() => <Signup getUser={this.getTheUser} />}
-              />
-              <Route exact path="/login" render={() => <Prueba />} />
-            </Switch>
+            
             <Contents />
           </header>
         </div>

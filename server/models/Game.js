@@ -5,7 +5,7 @@ const gameSchema = new Schema({
   title: String,
   author: String,
   description: String,
-  chapters:[{type:Schema.Types.ObjectId},]
+  chapters:[{type:Schema.Types.ObjectId, ref:"Chapter"},]
   
 }, {
   timestamps: {
