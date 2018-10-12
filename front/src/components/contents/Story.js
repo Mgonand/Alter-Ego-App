@@ -1,25 +1,32 @@
 import React, { Component } from "react";
-
+import axios from "axios";
+import { Link } from "react-router-dom";
 class story extends Component {
-  constructor(props) { 
-    super(props);
-    this.state = {
-      title: props.title,
-      text: props.text,
-      op1: props.option1,
-      op2: props.option2,
-      type: props.type
-    };
+  
+  pushChapter(){
+
   }
   render() {
-    return (
-      <div>
-        <h1>Title</h1>
-        <p>text</p>
-        <a href="/id1">option1</a>
-        <a href="/id2">option2</a>
-      </div>
-    );
+    const { title, text, options } = this.props;
+    if (Array.isArray(options))
+      return (
+        <div>
+          <h1>{title}</h1>
+          <p>{text}</p>
+          {options.map(e => {
+            return (
+              <h3
+                onClick={() => {
+                  this.props.findChapter(e._id);
+                }}
+              >
+                <Link to="/game">{e.title}</Link>
+              </h3>
+            );
+          })}
+        </div>
+      );
+    return <div />;
   }
 }
 

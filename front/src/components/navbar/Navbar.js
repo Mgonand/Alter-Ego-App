@@ -24,6 +24,7 @@ class Navbar extends Component {
       return (
         <nav className="nav-style">
           <ul>
+          <li><Link to='/'>Home</Link></li>
             <li><a onClick={this.handleLogout}>Logout</a></li>
           </ul>
 
@@ -35,6 +36,7 @@ class Navbar extends Component {
         <div>
           <nav className="nav-style">
             <ul>
+            <li><Link to='/'>Home</Link></li>
             <li><Link to='/signup'>Signup</Link></li>
             <li><Link to='/login'>Login</Link></li>
             </ul>

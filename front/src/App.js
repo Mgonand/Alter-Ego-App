@@ -9,14 +9,27 @@ import Signup from "./components/auth/Signup";
 import Login from "./components/auth/Login";
 import AuthService from "./components/auth/AuthService";
 import Contents from "./components/contents/Contents";
-
+import Story from "./components/contents/Story";
+import Home from "./components/contents/Home";
+import axios from "axios";
 class App extends Component {
   constructor(props) {
     super(props);
-    this.state = { loggedInUser: null };
+    this.state = { loggedInUser: null, game: { id: "id", c: "asd" } };
     this.service = new AuthService();
   }
+  getChapter = chapId => {
+    axios.get(`http://localhost:3010/api/games/${chapId}`).then(response => {
+      this.updateState(response.data, "c");
+    });
+  };
 
+  updateState = (id, name) => {
+    const _game = { ...this.state.game };
+    _game[name] = id;
+
+    this.setState({ game: _game }, () => {});
+  };
   getTheUser = userObj => {
     this.setState({
       loggedInUser: userObj
@@ -48,7 +61,6 @@ class App extends Component {
 
   render() {
     this.fetchUser();
-
     if (this.state.loggedInUser) {
       return (
         <div className="App">
@@ -57,8 +69,40 @@ class App extends Component {
               userInSession={this.state.loggedInUser}
               logout={this.logout}
             />
-            
-            <Contents />
+            <Switch>
+              <Route
+                exact
+                path="/game"
+                render={() => (
+                  <Story
+                    {...this.state.game.c}
+                    findChapter={id => {
+                      this.getChapter(id);
+                    }}
+                  />
+                )}
+              />
+              <Route
+                exact
+                path="/home"
+                render={() => (
+                  <Contents
+                    findGame={(id, cId) => {
+                      this.updateState(id, "id");
+                      this.getChapter(cId);
+                    }}
+                  />
+                )}
+              />
+              <Route
+                exact
+                path="/"
+                render={() => (
+                  <Home/>
+                )}
+              />
+              <Route exact path="/game" render={() => <Story />} />
+            </Switch>
           </header>
         </div>
       );
