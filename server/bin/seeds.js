@@ -88,7 +88,7 @@ let chapters = [{
   },
   {
     title: "OPCION 7",
-    text: "TEXTO DE CAPITULO 7",
+    text: "FINAL MALO 7",
     ref: 7,
     originRef: 3,
     options: [],
@@ -97,7 +97,7 @@ let chapters = [{
   },
   {
     title: "OPCION 8",
-    text: "TEXTO DE CAPITULO 8",
+    text: "FINAL MALO 8",
     ref: 8,
     originRef: 4,
     options: [],
@@ -106,7 +106,7 @@ let chapters = [{
   },
   {
     title: "OPCION 9",
-    text: "TEXTO DE CAPITULO 9",
+    text: "FINAL BUENO 9",
     ref: 9,
     originRef: 4,
     options: [],
@@ -115,7 +115,7 @@ let chapters = [{
   },
   {
     title: "OPCION 10",
-    text: "TEXTO DE CAPITULO 10",
+    text: "FINAL MALO 10",
     ref: 10,
     originRef: 5,
     options: [],
@@ -160,7 +160,7 @@ let chapters = [{
   },
   {
     title: "OPCION 15",
-    text: "FINAL BUENO 13",
+    text: "FINAL SUPER BUENO 13",
     ref: 15,
     originRef: 13,
     options: [],
@@ -217,24 +217,24 @@ User.deleteMany()
     return Game.find()
       .populate("chapters")
       .then(games => {
-        return Promise.all([
-          games.forEach(game => {
-            // Promise.all([
-              game.chapters.forEach(c => {
+        return Promise.all(
+          games.map(game => {
+            return Promise.all(
+              game.chapters.map(c => {
                 const update = game.chapters.filter(e => c.ref == e.originRef);
-                c.update({
+                return c.update({
                     options: update
                 }).then()
               })
-            // ])
+            )
           })
-        ])
+        )
       })
     // Close properly the connection to Mongoose
   })
   .then(() => {
     console.log("Terminado")
-    // mongoose.disconnect()
+    mongoose.disconnect()
   })
   .catch(err => {
     mongoose.disconnect()

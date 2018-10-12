@@ -62,8 +62,9 @@ require('./passport')(app);
 
 
 const authRouter = require('./routes/auth');
+const chapterRoutes = require("./routes/chapters")
 app.use('/api/auth', authRouter);
-
+app.use("/api/games",chapterRoutes)
 
 
 
