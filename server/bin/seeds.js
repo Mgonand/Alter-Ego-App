@@ -198,7 +198,6 @@ User.deleteMany()
     return Chapter.create(chapters)
   })
   .then(chaptersCreated => {
-    console.log(`${chaptersCreated.length} chapters created with the following id:`);
     const cId = chaptersCreated.map(u => u._id);
     return Promise.all([
       gamesSave.forEach(game => {
@@ -214,29 +213,28 @@ User.deleteMany()
       })
     ])
   })
-  .then((e) => {
-    Game.find()
+  .then(() => {
+    return Game.find()
       .populate("chapters")
       .then(games => {
-        const gId = games.chapters.map(u => u._id);
         return Promise.all([
           games.forEach(game => {
-            Promise.all([
-              games.chapter.forEach(c => {
-                game.update({
-                  $push: {
-                    chapters: c
-                  }
-                }).exec()
+            // Promise.all([
+              game.chapters.forEach(c => {
+                const update = game.chapters.filter(e => c.ref == e.originRef);
+                c.update({
+                    options: update
+                }).then()
               })
-            ])
+            // ])
           })
         ])
-
-
-        // mongoose.disconnect()
       })
     // Close properly the connection to Mongoose
+  })
+  .then(() => {
+    console.log("Terminado")
+    // mongoose.disconnect()
   })
   .catch(err => {
     mongoose.disconnect()
