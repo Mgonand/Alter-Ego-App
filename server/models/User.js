@@ -4,18 +4,19 @@ const Schema = mongoose.Schema;
 const userSchema = new Schema({
   username: String,
   password: String,
+  genres: [],
+  first: String,
+  second: String,
+  third: String,
+  fourth: String,
   gamesCompleted: [{
-    type: Schema.Types.ObjectId,ref:"Game"
+    type: Schema.Types.ObjectId,
+    ref: "Game"
   }, ],
   role: {
     type: String,
-    enum : ['USER', 'ADMIN'],
-    default : 'USER',
-    info:{
-      first:String,
-      second:String,
-      third:String,
-    }
+    enum: ['USER', 'ADMIN'],
+    default: 'USER',
   }
 
 }, {

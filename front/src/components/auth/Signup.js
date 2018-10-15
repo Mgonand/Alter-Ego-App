@@ -1,14 +1,20 @@
 // auth/Signup.js
 import React, { Component } from 'react';
 import AuthService from './AuthService'
-
+import { Link } from 'react-router-dom';
+import { Redirect } from 'react-router-dom'
 class Signup extends Component {
   constructor(props){
     super(props);
-    this.state = { username: '', password: '' };
+    this.state = { username: '', password: '' ,redirect: false};
     this.service = new AuthService();
   }
-    
+
+  renderRedirect = () => {
+    if (this.state.redirect) {
+      return <Redirect to='/setup' />
+    }
+  }
   handleFormSubmit = (event) => {
     event.preventDefault();
     const username = this.state.username;
@@ -19,8 +25,11 @@ class Signup extends Component {
         this.setState({
             username: "", 
             password: "",
+            redirect: true,
         });
         this.props.getUser(response.user)
+        this.renderRedirect()
+        
     })
     .catch( error => console.log(error) )
   }
@@ -32,8 +41,10 @@ class Signup extends Component {
       
 
   render() {
+    
     return(
       <div>
+        {this.renderRedirect()}
         <h3>Welcome!, create your account next:</h3>
 
         <form onSubmit={this.handleFormSubmit}>
@@ -50,6 +61,8 @@ class Signup extends Component {
           <input type="submit" value="Sign up" />
         </form>
 
+        <p>Ya tienes cuenta?</p>
+        <Link to='/login'><button>Login</button></Link>
       </div>
     )
   }

@@ -18,6 +18,7 @@ class story extends Component {
               <h3
                 onClick={() => {
                   this.props.findChapter(e._id);
+                  
                 }}
               >
                 <Link to="/game">{e.title}</Link>

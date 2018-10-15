@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import axios from "axios";
 import { Link } from "react-router-dom";
 class home extends Component {
   render() {
@@ -7,7 +6,7 @@ class home extends Component {
     <div>
       <Link to="/home">List of Stories</Link>
       <br/>
-      <Link to="/home">Profile</Link>
+      <Link to="/Game">Continue your Story</Link>
     </div>
     )}
 }

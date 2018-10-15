@@ -2,15 +2,17 @@ import React, { Component } from "react";
 import "./App.css";
 import { Switch, Route, Router } from "react-router-dom";
 
-// import ProjectList from './components/projects/ProjectList';
 import Navbar from "./components/navbar/Navbar";
-// import ProjectDetails from './components/projects/ProjectDetails';
 import Signup from "./components/auth/Signup";
 import Login from "./components/auth/Login";
 import AuthService from "./components/auth/AuthService";
 import Contents from "./components/contents/Contents";
 import Story from "./components/contents/Story";
 import Home from "./components/contents/Home";
+import Setup from "./components/contents/Setup";
+import Genres from "./components/contents/Genres";
+import Avatar from "./components/contents/Avatar";
+import Questions from "./components/contents/Questions";
 import axios from "axios";
 class App extends Component {
   constructor(props) {
@@ -60,6 +62,7 @@ class App extends Component {
   }
 
   render() {
+    
     this.fetchUser();
     if (this.state.loggedInUser) {
       return (
@@ -94,14 +97,14 @@ class App extends Component {
                   />
                 )}
               />
-              <Route
-                exact
-                path="/"
-                render={() => (
-                  <Home/>
-                )}
-              />
+              <Route exact path="/setup" render={() => <Setup />} />
+              <Route exact path="/" render={() => <Home />} />
               <Route exact path="/game" render={() => <Story />} />
+              <Route exact path="/genres" render={() => <Genres id={this.state.loggedInUser._id}/>} />
+              <Route exact path="/avatar" render={() => <Avatar id={this.state.loggedInUser._id}/>} />
+              <Route exact path="/questions" render={() => <Questions id={this.state.loggedInUser._id}/>} />
+              <Route exact path="/login" render={() => <Home />} />
+              
             </Switch>
           </header>
         </div>
@@ -109,24 +112,10 @@ class App extends Component {
     } else {
       return (
         <div className="App">
-          <header className="App-header">
-            <Navbar
-              userInSession={this.state.loggedInUser}
-              logout={this.logout}
-            />
-            <Switch>
-              <Route
-                exact
-                path="/signup"
-                render={() => <Signup getUser={this.getTheUser} />}
-              />
-              <Route
-                exact
-                path="/login"
-                render={() => <Login getUser={this.getTheUser} />}
-              />
-            </Switch>
-          </header>
+          <Switch>
+            <Route exact path="/login" render={() => <Login getUser={this.getTheUser} />} />
+            <Route path="/" render={() => <Signup getUser={this.getTheUser}/>} />
+          </Switch>
         </div>
       );
     }

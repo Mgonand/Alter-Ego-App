@@ -18,16 +18,14 @@ router.get('/:id', (req, res, next) => {
 
 })
 
-router.post('/:id', (req, res, next) => {
-  User.update({
-    $push: {
-      chapters: c
-    }
-    .populate("options","title")
-    .then(chapter => res.status(200).json(chapter))
-    .catch(e => next(e))
-
-})
+router.put('/questions/:id', (req, res, next)=>{
+  User.findByIdAndUpdate(req.params.id, req.body)
+    .then(() => {
+      res.json({message: `User ${req.params.id} is updated successfully.`});
+    })
+    .catch(err => {
+      res.json(err);
+    })
 })
 
 
