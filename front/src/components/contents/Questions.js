@@ -17,10 +17,7 @@ class questions extends Component {
     event.preventDefault();
   };
 
-
-
   submitForm() {
-    console.log("aquí")
     axios
       .put(
         `http://localhost:3010/api/games/questions/${this.props.id}`,
@@ -70,12 +67,11 @@ class questions extends Component {
             />
           </div>
           <div>
-          <Link to="/home"><button onClick={this.submitForm.bind(this)}>
-              NEXT
-            </button></Link>
+            <Link to="/home">
+              <button onClick={this.submitForm.bind(this)}>NEXT</button>
+            </Link>
           </div>
         </form>
-        
       </div>
     );
   }

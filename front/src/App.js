@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import "./App.css";
 import { Switch, Route, Router } from "react-router-dom";
-
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import Navbar from "./components/navbar/Navbar";
 import Signup from "./components/auth/Signup";
 import Login from "./components/auth/Login";

@@ -28,6 +28,17 @@ router.put('/questions/:id', (req, res, next)=>{
     })
 })
 
+router.put('/genres/:id', (req, res, next)=>{
+  console.log(req.body)
+  User.findByIdAndUpdate(req.params.id, {"genres": req.body.check})
+    .then(() => {
+      res.json({message: `User ${req.params.id} is updated successfully.`});
+    })
+    .catch(err => {
+      res.json(err);
+    })
+})
+
 
 
 module.exports = router;
