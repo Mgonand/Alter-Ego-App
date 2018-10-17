@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
+import SpecialButton from "../buttons/genres/SpecialButton"
+
 class genres extends Component {
   state = {
     isMJ: false,
@@ -44,6 +46,8 @@ class genres extends Component {
     return (
       <div className="container">
         <h2>Save the multiple checkbox values in React js</h2>
+        <SpecialButton normalClassName="cesar" type="a" />
+        <SpecialButton normalClassName="cesar2" type="b" />
         <hr />
         <form >
           <div className="form-check">

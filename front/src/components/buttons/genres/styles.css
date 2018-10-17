@@ -1,0 +1,17 @@
+.cesar {
+  fill: #00ff00;
+  transition: all 0.5s;
+}
+
+.cesar2 {
+  fill: #0000ff;
+  transition: all 0.5s;
+}
+
+.cesar:hover  {
+  fill: #ff0000;
+}
+
+.cesar2:hover {
+  fill: #ffcc00;
+}

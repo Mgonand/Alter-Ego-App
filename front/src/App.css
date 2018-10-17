@@ -1,41 +1,76 @@
-.App {
+
+
+.main {
   text-align: center;
+  width: 100%;
+  height: 100vh;
+}
+.gradient{
+  background-image: linear-gradient(to bottom, #333333, #2096ae);
+
+}
+.Rectangle {
+  margin-bottom: 16px;
+  width: 328px;
+  height: 49px;
+  border:none;
+  border-radius: 21.5px;
+  background-color: rgba(216,216,216, 0.15);
+  position: relative;
+  top:352px;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
+.Rectangle .Regstrate {
+  width: 227px;
+  height: 26px;
+  font-family: PlayfairDisplay;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #ffffff;
+  
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: top;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.Rectangle .Mi-cuenta {
+  width: 205px;
+  height: 26px;
+  font-family: PlayfairDisplay;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #ffffff;
+}
+.AlterEgo {
+  font-family: 'Special Elite', cursive;
+  font-size: 40px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #ffffff;
+  position: relative;
+  top:250px;
 }
 
-.App-link {
-  color: #61dafb;
+.icon{
+  width: 66px;
+  height: 69px;
+  opacity: 0.15;
+  background-color: #d8d8d8;
+  position: relative;
+  top:124px;
+  left:155px;
 }
-
-a {
-  color: white;
-  cursor: pointer;
-}
-
-fieldset {
-  border: 0;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.blue-title{
+  color: #2096ae;
+  top:50px;
 }

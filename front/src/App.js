@@ -114,7 +114,8 @@ class App extends Component {
         <div className="App">
           <Switch>
             <Route exact path="/login" render={() => <Login getUser={this.getTheUser} />} />
-            <Route path="/" render={() => <Signup getUser={this.getTheUser}/>} />
+            <Route exact path="/signup" render={() => <Signup getUser={this.getTheUser}/>} />
+            <Route exact path="/" render={() => <Home />} />
           </Switch>
         </div>
       );
