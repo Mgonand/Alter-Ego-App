@@ -10,12 +10,12 @@ const session = require('express-session');
 const MongoStore = require('connect-mongo')(session);
 const cors = require('cors');
 
-const { DBURL } = process.env;
+const {MONGODB_URI } = process.env;
 mongoose.Promise = Promise;
 mongoose
-  .connect(DBURL)
+  .connect(MONGODB_URI)
   .then(() => {
-    console.log(`Connected to Mongo on ${DBURL}`)
+    console.log(`Connected to Mongo on ${MONGODB_URI}`)
   }).catch(err => {
     console.error('Error connecting to mongo', err)
   });
@@ -66,6 +66,9 @@ const chapterRoutes = require("./routes/chapters")
 app.use('/api/auth', authRouter);
 app.use("/api/games",chapterRoutes)
 
-
+app.use((req, res, next) => {
+  // If no routes match, send them the React HTML.
+  res.sendFile(__dirname + "/public/index.html");
+});
 
 module.exports = app;  

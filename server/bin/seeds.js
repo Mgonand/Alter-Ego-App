@@ -7,7 +7,7 @@ const Chapter = require("../models/Chapter");
 const bcryptSalt = 10;
 
 mongoose
-  .connect(process.env.DBURL, {
+  .connect(process.env.MONGODB_URI, {
     useNewUrlParser: true
   })
   .then(x => {
