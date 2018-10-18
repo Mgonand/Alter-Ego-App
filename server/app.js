@@ -68,6 +68,7 @@ app.use("/api/games",chapterRoutes)
 
 app.use("*", (req, res, next) => {
   // If no routes match, send them the React HTML.
+  console.log(path.join(__dirname, "/public/index.html"))
   res.sendFile(path.join(__dirname, "/public/index.html"));
 });
 
