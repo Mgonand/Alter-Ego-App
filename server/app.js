@@ -40,6 +40,7 @@ app.use(cors(corsOptions));
 
 // Middleware Setup
 app.use(logger('dev'));
+app.use(express.static(path.join(__dirname, 'public')));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
   extended: false
@@ -68,7 +69,7 @@ app.use("/api/games",chapterRoutes)
 
 app.use("*", (req, res, next) => {
   // If no routes match, send them the React HTML.
-  console.log(path.join(__dirname, "/public/index.html"))
+  console.log(res.sendFile(path.join(__dirname, "/public/index.html")))
   res.sendFile(path.join(__dirname, "/public/index.html"));
 });
 
