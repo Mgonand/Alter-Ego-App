@@ -31,47 +31,88 @@ class questions extends Component {
     let { first, second, third, fourth } = this.state;
     return (
       <div>
-        <form onSubmit={this.handleSubmit}>
-          <div>
-            <label for="first">Pregunta 1: </label>
+        <h1 className="questionsH1">
+          Empieza <br />
+          contestando estas preguntas sobre ti:
+        </h1>
+
+        <svg
+          className="svgTop"
+          width="343px"
+          height="208px"
+          viewBox="0 0 343 208"
+        >
+          <g
+            id="Page-1"
+            stroke="none"
+            stroke-width="1"
+            fill="none"
+            fill-rule="evenodd"
+          >
+            <g
+              id="Pantalla-4"
+              transform="translate(-16.000000, -80.000000)"
+              fill="#333333"
+              fill-rule="nonzero"
+            >
+              <path
+                d="M28.6821801,129.140183 L341.68218,80.1870545 C349.866953,78.906958 357.539745,84.5043038 358.819842,92.6890765 C358.939766,93.455859 359,94.2307924 359,95.0068963 L359,273 C359,281.284271 352.284271,288 344,288 L31,288 C22.7157288,288 16,281.284271 16,273 L16,143.960025 C16,136.570632 21.3815379,130.282002 28.6821801,129.140183 Z"
+                id="Rectangle-Copy-12"
+                transform="translate(187.500000, 184.000000) scale(-1, -1) translate(-187.500000, -184.000000) "
+              />
+            </g>
+          </g>
+        </svg>
+        <form onSubmit={this.handleSubmit} className="questionForm">
+         
+            <label for="first" className="questionLabel">
+            ¿Cúal es tu color favorito?
+            </label>
             <input
+              className="questionInput"
               type="text"
               id="first"
               name="first"
               value={first}
               onChange={e => this.setState({ first: e.currentTarget.value })}
             />
-            <label for="second">Pregunta 2: </label>
+            <hr className="questionHr" />
+            <label for="second" className="questionLabel">
+            ¿Con qué animal te identificas?
+            </label>
             <input
+              className="questionInput"
               type="text"
               id="second"
               name="second"
               value={second}
               onChange={e => this.setState({ second: e.currentTarget.value })}
             />
-            <label for="third">Pregunta 3: </label>
+            <hr className="questionHr" />
+            <label for="third" className="questionLabel">
+            ¿Qué sueles comer con frecuencia?
+            </label>
             <input
+              className="questionInput"
               type="text"
               id="third"
               name="third"
               value={third}
               onChange={e => this.setState({ third: e.currentTarget.value })}
             />
-            <label for="fourth">Pregunta 4: </label>
-            <input
-              type="text"
-              id="fourth"
-              name="fourth"
-              value={fourth}
-              onChange={e => this.setState({ fourth: e.currentTarget.value })}
-            />
-          </div>
-          <div>
-            <Link to="/home">
-              <button onClick={this.submitForm.bind(this)}>NEXT</button>
-            </Link>
-          </div>
+            <hr className="questionHr" />
+        
         </form>
+        <Link to="/genres">
+              <button
+                onClick={this.submitForm.bind(this)}
+                className="signBtn"
+                type="submit"
+                value="Sign up"
+              >
+                <span className="signSpan">Siguiente</span>
+              </button>
+            </Link>
       </div>
     );
   }
