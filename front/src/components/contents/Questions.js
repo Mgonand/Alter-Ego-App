@@ -20,7 +20,7 @@ class questions extends Component {
   submitForm() {
     axios
       .put(
-        `http://localhost:3010/api/games/questions/${this.props.id}`,
+        `${process.env.REACT_APP_API_URL}/api/games/questions/${this.props.id}`,
         this.state
       )
       .then(res => {

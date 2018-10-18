@@ -51,7 +51,7 @@ class genres extends Component {
       check: arr.toString()
     };
     axios
-      .put(`http://localhost:3010/api/games/genres/${this.props.id}`, data)
+      .put(`${process.env.REACT_APP_API_URL}/api/games/genres/${this.props.id}`, data)
       .then(res => console.log(res.data));
   };
 

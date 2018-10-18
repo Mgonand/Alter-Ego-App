@@ -12,7 +12,7 @@ class Contents extends Component {
   }
 
   componentDidMount() {
-    axios.get("http://localhost:3010/api/games").then(res => {
+    axios.get(`${process.env.REACT_APP_API_URL}/api/games`).then(res => {
       const list = res.data;
       this.setState({ list });
     });

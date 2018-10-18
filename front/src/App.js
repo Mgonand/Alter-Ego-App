@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import "./App.scss";
 import { Switch, Route, Router } from "react-router-dom";
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
-import Navbar from "./components/navbar/Navbar";
 import Signup from "./components/auth/Signup";
 import Login from "./components/auth/Login";
 import AuthService from "./components/auth/AuthService";
@@ -21,7 +20,7 @@ class App extends Component {
     this.service = new AuthService();
   }
   getChapter = chapId => {
-    axios.get(`http://localhost:3010/api/games/${chapId}`).then(response => {
+    axios.get(`${process.env.REACT_APP_API_URL}/api/games/${chapId}`, {withCredentials: true}).then(response => {
       this.updateState(response.data, "c");
     });
   };
