@@ -66,7 +66,7 @@ const chapterRoutes = require("./routes/chapters")
 app.use('/api/auth', authRouter);
 app.use("/api/games",chapterRoutes)
 
-app.use((req, res, next) => {
+app.use("*", (req, res, next) => {
   // If no routes match, send them the React HTML.
   res.sendFile(path.join(__dirname, "/public/index.html"));
 });
