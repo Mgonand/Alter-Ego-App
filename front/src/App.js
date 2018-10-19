@@ -153,6 +153,7 @@ class App extends Component {
               render={() => <Signup getUser={this.getTheUser} />}
             />
             <Route exact path="/" render={() => <Home />} />
+            <Route path='*' exact={true} component={NotFound} />
           </Switch>
         </div>
       );
