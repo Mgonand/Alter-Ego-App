@@ -14,6 +14,7 @@ import Avatar from "./components/contents/Avatar";
 import Questions from "./components/contents/Questions";
 import Intro from "./components/contents/Intro";
 import Enigma from "./components/contents/Enigma";
+import NotFound from "./components/contents/NotFound";
 import axios from "axios";
 class App extends Component {
   constructor(props) {
@@ -130,6 +131,7 @@ class App extends Component {
                 render={() => <Enigma id={this.state.loggedInUser._id} />}
               />
               <Route exact path="/login" render={() => <Home />} />
+              <Route path='*' exact={true} component={NotFound} />
             </Switch>
           </header>
         </div>

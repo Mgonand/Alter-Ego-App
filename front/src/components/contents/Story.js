@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
 import Page1 from "./Page1";
 import Page2 from "./Page2";
 import PageOptions from "./PageOptions";
@@ -8,6 +7,8 @@ import GoodEndText from "./GoodEndText";
 import BadEnd from "./BadEnd";
 import BadEndText from "./BadEndText";
 import Enigma from "./Enigma";
+import Map from "./Map";
+
 class story extends Component {
   constructor(props) {
     super(props);
@@ -40,6 +41,8 @@ class story extends Component {
       return <BadEnd next={this.nextPage}/>;
     } else if (this.state.page === 8) {
       return <BadEndText next={this.nextPage}/>;
+    } else if (this.state.page === 9) {
+      return <Map next={this.nextPage}/>;
     }
   }
 }

@@ -3,6 +3,12 @@ class PageOptions extends Component {
   render() {
     return (
       <div>
+        <h2 className="Mapa" onClick={() => this.props.next(9)}>Mapa</h2>
+        <img
+            className="Shape"
+            src={require("../../settings.png")}
+            alt="alt"
+          />
         <div className="cap2text">
           <p>
             —Señor, lo siento. Este número está reservado para emergencias. Por
@@ -52,10 +58,10 @@ class PageOptions extends Component {
             alt="alt"
           />
 
-        <button onClick={() => this.props.next(5)} className="btnSi">
+        <button onClick={() => this.props.next(7)} className="btnSi">
           <span >Sí</span>
         </button>
-        <button onClick={() => this.props.next(7)} className="btnNo">
+        <button onClick={() => this.props.next(5)} className="btnNo">
           <span >No</span>
         </button>
       </div>

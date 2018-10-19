@@ -1,9 +1,14 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
 class Page1 extends Component {
   render() {
     return (
       <div>
+        <h2 className="Mapa" onClick={() => this.props.next(9)}>Mapa</h2>
+        <img
+            className="Shape"
+            src={require("../../settings.png")}
+            alt="alt"
+          />
         <h1 className="cap1H1">El día de las Bestias</h1>
         <div>
           <img

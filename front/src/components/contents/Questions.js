@@ -31,6 +31,18 @@ class questions extends Component {
     let { first, second, third} = this.state;
     return (
       <div>
+        <Link to="/setup">
+        <img
+            className="prev"
+            src={require("../../anterior.png")}
+            alt="alt"
+          />
+          </Link>
+        <img
+            className="Shape"
+            src={require("../../settings.png")}
+            alt="alt"
+          />
         <h1 className="questionsH1">
           Empieza <br />
           contestando estas preguntas sobre ti:

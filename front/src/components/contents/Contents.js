@@ -19,6 +19,11 @@ class Contents extends Component {
   render() {
     return (
       <div>
+        <img
+            className="Shape"
+            src={require("../../settings.png")}
+            alt="alt"
+          />
         <h1 className="homeTerrorH1">Terror</h1>
         <div className="scroll1">
           <Link to="/game">

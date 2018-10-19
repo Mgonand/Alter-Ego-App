@@ -12,7 +12,6 @@ class genres extends Component {
   };
 
   toggleChangeTerr = () => {
-    console.log("hola");
     this.setState(prevState => ({
       Terror: !prevState.Terror
     }));
@@ -58,6 +57,18 @@ class genres extends Component {
   render() {
     return (
       <div className="container">
+       <Link to="/questions">
+      <img
+            className="prev"
+            src={require("../../anterior.png")}
+            alt="alt"
+          />
+          </Link>
+      <img
+            className="Shape"
+            src={require("../../settings.png")}
+            alt="alt"
+          />
         <h1 className="questionsH1">
           ¿Qué tipo de
           <br /> historias prefieres?

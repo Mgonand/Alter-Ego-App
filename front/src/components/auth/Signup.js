@@ -16,7 +16,6 @@ class Signup extends Component {
     }
   };
   handleFormSubmit = event => {
-    console.log("hola");
     event.preventDefault();
     const username = this.state.username;
     const password = this.state.password;
@@ -102,11 +101,11 @@ class Signup extends Component {
             <input className="signInput" type="email" name="email" />
             <hr className="signHr"/>
           </fieldset>
-          <fieldset>
+          {/* <fieldset>
             <label className="signLabel">Conectar con:</label>
             <input className="signInput" type="email" name="email" />
             <hr className="signHr"/>
-          </fieldset>
+          </fieldset> */}
         </form>
         <button
           onClick={this.handleFormSubmit.bind(this)}

@@ -1,9 +1,14 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
 class Page2 extends Component {
   render() {
     return (
       <div>
+        <h2 className="Mapa" onClick={() => this.props.next(9)}>Mapa</h2>
+        <img
+            className="Shape"
+            src={require("../../settings.png")}
+            alt="alt"
+          />
         <div className="cap2text">
           <p>
             Y cada vez que llamaba, se salía con la suya en todo. La voz

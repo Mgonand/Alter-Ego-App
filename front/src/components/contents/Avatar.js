@@ -1,10 +1,22 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-class genres extends Component {
+class Avatar extends Component {
   render() {
     return (
       <div>
         <div>
+        <Link to="/genres">
+        <img
+            className="prev"
+            src={require("../../anterior.png")}
+            alt="alt"
+          />
+          </Link>
+        <img
+            className="Shape"
+            src={require("../../settings.png")}
+            alt="alt"
+          />
           <h1 className="questionsH2">Elije tu avatar</h1>
           <svg
             className="svgTop"
@@ -57,4 +69,4 @@ class genres extends Component {
   }
 }
 
-export default genres;
+export default Avatar;

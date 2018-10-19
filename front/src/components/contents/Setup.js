@@ -4,6 +4,11 @@ class setup extends Component {
   render() {
     return (
       <div>
+        <img
+            className="Shape"
+            src={require("../../settings.png")}
+            alt="alt"
+          />
         <svg className="signSvg" width="343px" height="456px" viewBox="0 0 343 456">
           <g
             id="Page-1"
