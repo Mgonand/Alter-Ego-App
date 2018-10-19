@@ -92,6 +92,8 @@ class App extends Component {
                       this.updateState(id, "id");
                       this.getChapter(cId);
                     }}
+                    logout={()=>{this.service.logout()}}
+
                   />
                 )}
               />
@@ -101,7 +103,7 @@ class App extends Component {
                     findGame={(id, cId) => {
                       this.updateState(id, "id");
                       this.getChapter(cId);
-                    }}
+                    }} logout={()=>{this.service.logout()}}
                   />
                 )} />
               <Route exact path="/game" render={() => <Story />} />

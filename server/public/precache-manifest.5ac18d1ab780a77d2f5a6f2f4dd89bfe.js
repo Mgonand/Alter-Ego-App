@@ -4,7 +4,7 @@ self.__precacheManifest = [
     "url": "/static/media/birdGood.02cf90ef.png"
   },
   {
-    "revision": "3f769555218eb645aa43",
+    "revision": "3dc9dd3177b5c6f6229a",
     "url": "/static/css/main.9ab61647.chunk.css"
   },
   {
@@ -60,8 +60,8 @@ self.__precacheManifest = [
     "url": "/static/media/goodEnding.181767ca.png"
   },
   {
-    "revision": "3f769555218eb645aa43",
-    "url": "/static/js/main.3f769555.chunk.js"
+    "revision": "3dc9dd3177b5c6f6229a",
+    "url": "/static/js/main.3dc9dd31.chunk.js"
   },
   {
     "revision": "1e608733c391bc6fbc29a78c364f17a5",
@@ -120,7 +120,7 @@ self.__precacheManifest = [
     "url": "/static/css/1.9c897223.chunk.css"
   },
   {
-    "revision": "ad37751327f7860bf0c1e7b1a22203e2",
+    "revision": "0eacccaef8748a04e7e4f3e4e73c7723",
     "url": "/index.html"
   }
 ];

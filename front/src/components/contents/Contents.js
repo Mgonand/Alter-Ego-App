@@ -20,6 +20,7 @@ class Contents extends Component {
     return (
       <div>
         <img
+        onClick={()=>{this.props.logout()}}
             className="Shape"
             src={require("../../settings.png")}
             alt="alt"
