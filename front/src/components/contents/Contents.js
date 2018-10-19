@@ -7,8 +7,6 @@ class Contents extends Component {
     this.state = {
       list: []
     };
-
-
   }
 
   componentDidMount() {
@@ -21,16 +19,23 @@ class Contents extends Component {
   render() {
     return (
       <div>
-        <h1>hola</h1>
-        {this.state.list.map(list => {
-          return (
-            <div>
-              <h1 onClick={() => {this.props.findGame(list._id, list.chapters[0])}}>
-                <Link to="/game">{list.title} </Link>
-              </h1>
-            </div>
-          );
-        })}
+        <h1 className="homeTerrorH1">Terror</h1>
+        <div className="scroll1">
+          <Link to="/game">
+            <img
+              className="image"
+              src={require("../../tarjeta1.png")}
+              alt="alt"
+            />
+          </Link>
+
+          <img className="image" src={require("../../oso.png")} alt="alt" />
+        </div>
+        <h1 className="homeTerrorH2">Aventuras</h1>
+        <div className="scroll2">
+          <img className="image" src={require("../../lobo.png")} alt="alt" />
+          <img className="image" src={require("../../bicho4.png")} alt="alt" />
+        </div>
       </div>
     );
   }

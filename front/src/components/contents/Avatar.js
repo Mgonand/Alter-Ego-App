@@ -34,8 +34,20 @@ class genres extends Component {
             </g>
           </svg>
         </div>
-<div></div>
-        <Link to="/home">
+        <div />
+        <div className="scroll1 avatarTop">
+          <img className="avatar" src={require("../../caiman.png")} alt="alt" />
+          <img className="avatar" src={require("../../corazon.png")} alt="alt" />
+          <img className="avatar" src={require("../../caballoajedrez.png")} alt="alt" />
+          <img className="avatar" src={require("../../balanza.png")} alt="alt" />
+        </div>
+        <div className="scroll2">
+          <img className="avatar" src={require("../../Cangrejo.png")} alt="alt" />
+          <img className="avatar" src={require("../../Calavera.png")} alt="alt" />
+          <img className="avatar" src={require("../../gato.png")} alt="alt" />
+          <img className="avatar" src={require("../../golondrina.png")} alt="alt" />
+        </div>
+        <Link to="/intro">
           <button className="signBtn">
             <span className="signSpan">Comenzar</span>
           </button>

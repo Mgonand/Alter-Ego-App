@@ -28,7 +28,7 @@ class questions extends Component {
       });
   }
   render() {
-    let { first, second, third, fourth } = this.state;
+    let { first, second, third} = this.state;
     return (
       <div>
         <h1 className="questionsH1">

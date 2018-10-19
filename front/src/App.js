@@ -12,6 +12,8 @@ import Setup from "./components/contents/Setup";
 import Genres from "./components/contents/Genres";
 import Avatar from "./components/contents/Avatar";
 import Questions from "./components/contents/Questions";
+import Intro from "./components/contents/Intro";
+import Enigma from "./components/contents/Enigma";
 import axios from "axios";
 class App extends Component {
   constructor(props) {
@@ -66,10 +68,7 @@ class App extends Component {
       return (
         <div className="App">
           <header className="App-header">
-            {/* <Navbar
-              userInSession={this.state.loggedInUser}
-              logout={this.logout}
-            /> */}
+            
             <Switch>
               <Route
                 exact
@@ -117,8 +116,18 @@ class App extends Component {
               />
               <Route
                 exact
+                path="/intro"
+                render={() => <Intro id={this.state.loggedInUser._id} />}
+              />
+              <Route
+                exact
                 path="/questions"
                 render={() => <Questions id={this.state.loggedInUser._id} />}
+              />
+              <Route
+                exact
+                path="/enigma"
+                render={() => <Enigma id={this.state.loggedInUser._id} />}
               />
               <Route exact path="/login" render={() => <Home />} />
             </Switch>

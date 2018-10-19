@@ -1,32 +1,46 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
+import Page1 from "./Page1";
+import Page2 from "./Page2";
+import PageOptions from "./PageOptions";
+import GoodEnd from "./GoodEnd";
+import GoodEndText from "./GoodEndText";
+import BadEnd from "./BadEnd";
+import BadEndText from "./BadEndText";
+import Enigma from "./Enigma";
 class story extends Component {
-  
-  pushChapter(){
-
+  constructor(props) {
+    super(props);
+    this.state = {
+      page: 1,
+      bad: false,
+      good: false
+    };
   }
+  nextPage=(newPage)=>{
+    this.setState({page:newPage})
+  }
+
+
+
   render() {
-    const { title, text, options } = this.props;
-    if (Array.isArray(options))
-      return (
-        <div>
-          <h1>{title}</h1>
-          <p>{text}</p>
-          {options.map(e => {
-            return (
-              <h3
-                onClick={() => {
-                  this.props.findChapter(e._id);
-                  
-                }}
-              >
-                <Link to="/game">{e.title}</Link>
-              </h3>
-            );
-          })}
-        </div>
-      );
-    return <div />;
+    if (this.state.page === 1) {
+      return <Page1 next={this.nextPage}/>;
+    } else if (this.state.page === 2) {
+      return <Page2 next={this.nextPage}/>;
+    }else if (this.state.page === 3) {
+      return <Enigma next={this.nextPage} />;
+    } else if (this.state.page === 4) {
+      return <PageOptions next={this.nextPage}/>;
+    } else if (this.state.page === 5) {
+      return <GoodEnd next={this.nextPage}/>;
+    } else if (this.state.page === 6) {
+      return <GoodEndText next={this.nextPage}/>;
+    } else if (this.state.page === 7) {
+      return <BadEnd next={this.nextPage}/>;
+    } else if (this.state.page === 8) {
+      return <BadEndText next={this.nextPage}/>;
+    }
   }
 }
 
