@@ -1,23 +1,31 @@
 self.__precacheManifest = [
   {
-    "revision": "1e608733c391bc6fbc29a78c364f17a5",
-    "url": "/static/media/badEnding.1e608733.png"
+    "revision": "02cf90ef531f5ac624969cf127d09a16",
+    "url": "/static/media/birdGood.02cf90ef.png"
   },
   {
-    "revision": "40b9f9ee78607f6ab2f2",
-    "url": "/static/css/main.b620f907.chunk.css"
+    "revision": "3f769555218eb645aa43",
+    "url": "/static/css/main.9ab61647.chunk.css"
   },
   {
     "revision": "c61330b179f7171e5ae8568c59d664a5",
     "url": "/static/media/nubes2.c61330b1.png"
   },
   {
-    "revision": "25feb24d1de02a4b3ea3",
-    "url": "/static/js/1.25feb24d.chunk.js"
+    "revision": "82a94e6e24b1b6ba3af4",
+    "url": "/static/js/1.82a94e6e.chunk.js"
   },
   {
     "revision": "229c360febb4351a89df",
     "url": "/static/js/runtime~main.229c360f.js"
+  },
+  {
+    "revision": "03ee586fcee32dd23576264073a3f47f",
+    "url": "/static/media/settings.03ee586f.png"
+  },
+  {
+    "revision": "a8dd8f40f6b6545fcce199edb2f937f7",
+    "url": "/static/media/anterior.a8dd8f40.png"
   },
   {
     "revision": "7980090261e455966665d71fa3d26a87",
@@ -52,12 +60,24 @@ self.__precacheManifest = [
     "url": "/static/media/goodEnding.181767ca.png"
   },
   {
-    "revision": "40b9f9ee78607f6ab2f2",
-    "url": "/static/js/main.40b9f9ee.chunk.js"
+    "revision": "3f769555218eb645aa43",
+    "url": "/static/js/main.3f769555.chunk.js"
+  },
+  {
+    "revision": "1e608733c391bc6fbc29a78c364f17a5",
+    "url": "/static/media/badEnding.1e608733.png"
+  },
+  {
+    "revision": "7e2b0c566b4f07ab2bdb0bbb05a53e4d",
+    "url": "/static/media/fishBad.7e2b0c56.png"
   },
   {
     "revision": "f3a3ae63a99d59d8c0cdc065ea2bfecc",
     "url": "/static/media/enigma.f3a3ae63.png"
+  },
+  {
+    "revision": "cf8232a98b7b54b5e9154ff878a34ead",
+    "url": "/static/media/mapa.cf8232a9.png"
   },
   {
     "revision": "60d670dce76478bceec0138c93397395",
@@ -96,11 +116,11 @@ self.__precacheManifest = [
     "url": "/static/media/nubes1.4f4d122f.png"
   },
   {
-    "revision": "25feb24d1de02a4b3ea3",
-    "url": "/static/css/1.238c465f.chunk.css"
+    "revision": "82a94e6e24b1b6ba3af4",
+    "url": "/static/css/1.9c897223.chunk.css"
   },
   {
-    "revision": "5d38a3f278fa4d79dbecafc7997f263d",
+    "revision": "ad37751327f7860bf0c1e7b1a22203e2",
     "url": "/index.html"
   }
 ];
