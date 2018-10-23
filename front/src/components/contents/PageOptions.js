@@ -2,7 +2,7 @@ import React, { Component } from "react";
 class PageOptions extends Component {
   render() {
     return (
-      <div>
+      <div className="main">
         <h2 className="Mapa" onClick={() => this.props.next(9)}>Mapa</h2>
         <img
             className="Shape"
@@ -42,28 +42,30 @@ class PageOptions extends Component {
             <span className="cap3Span">¿Abres la puerta del sótano?</span>
           </p>
         </div>
-        <img
-            className="desliza"
-            src={require("../../desliza.png")}
-            alt="alt"
-          />
-        <img
-            className="ovalCircle"
-            src={require("../../OvalCircle.png")}
-            alt="alt"
-          />
+        <div className="options">
           <img
-            className="oval"
-            src={require("../../oval.png")}
-            alt="alt"
-          />
-
-        <button onClick={() => this.props.next(7)} className="btnSi">
-          <span >Sí</span>
-        </button>
-        <button onClick={() => this.props.next(5)} className="btnNo">
-          <span >No</span>
-        </button>
+              className="desliza"
+              src={require("../../desliza.png")}
+              alt="alt"
+            />
+          <img
+              className="ovalCircle"
+              src={require("../../OvalCircle.png")}
+              alt="alt"
+            />
+            <img
+              className="oval"
+              src={require("../../oval.png")}
+              alt="alt"
+            />
+  
+          <button onClick={() => this.props.next(7)} className="btnSi">
+            <span >Sí</span>
+          </button>
+          <button onClick={() => this.props.next(5)} className="btnNo">
+            <span >No</span>
+          </button>
+        </div>
       </div>
     );
   }

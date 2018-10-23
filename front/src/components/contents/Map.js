@@ -9,7 +9,7 @@ class Map extends Component {
   
   render() {
     return (
-     <div className="enigma">
+     <div className=" main enigma">
  <div className="back" onClick={() => this.props.next(1)}></div>
      <img className="enigmaImg" src={require('../../mapa.png')} alt="alt"/>
      </div>

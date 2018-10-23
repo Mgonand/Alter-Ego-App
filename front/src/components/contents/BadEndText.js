@@ -21,7 +21,7 @@ class BadEndText extends Component {
 
   render() {
     return (
-      <div>
+      <div className="main">
         <h2 className="Mapa" onClick={() => this.props.next(9)}>
           Mapa
         </h2>

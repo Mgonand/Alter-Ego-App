@@ -2,7 +2,7 @@ import React, { Component } from "react";
 class Page1 extends Component {
   render() {
     return (
-      <div>
+      <div className="main">
         <h2 className="Mapa" onClick={() => this.props.next(9)}>Mapa</h2>
         <img
             className="Shape"

@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "02cf90ef531f5ac624969cf127d09a16",
-    "url": "/static/media/birdGood.02cf90ef.png"
+    "revision": "181767cad7feb24c3e92e4d483c1b9bc",
+    "url": "/static/media/goodEnding.181767ca.png"
   },
   {
-    "revision": "6dc156da5d2b68c84b25",
-    "url": "/static/css/main.9ab61647.chunk.css"
+    "revision": "4f80240cbd940b301916",
+    "url": "/static/css/main.12374802.chunk.css"
   },
   {
     "revision": "c61330b179f7171e5ae8568c59d664a5",
@@ -26,6 +26,14 @@ self.__precacheManifest = [
   {
     "revision": "a8dd8f40f6b6545fcce199edb2f937f7",
     "url": "/static/media/anterior.a8dd8f40.png"
+  },
+  {
+    "revision": "34295c0cd0f3d01e5ea4b9c9564e84f4",
+    "url": "/static/media/adler-webfont.34295c0c.woff2"
+  },
+  {
+    "revision": "ae3646e87f5f50c70b35094abc1d4abf",
+    "url": "/static/media/adler-webfont.ae3646e8.woff"
   },
   {
     "revision": "7980090261e455966665d71fa3d26a87",
@@ -56,12 +64,12 @@ self.__precacheManifest = [
     "url": "/static/media/oval.5b3dec26.png"
   },
   {
-    "revision": "181767cad7feb24c3e92e4d483c1b9bc",
-    "url": "/static/media/goodEnding.181767ca.png"
+    "revision": "4f80240cbd940b301916",
+    "url": "/static/js/main.4f80240c.chunk.js"
   },
   {
-    "revision": "6dc156da5d2b68c84b25",
-    "url": "/static/js/main.6dc156da.chunk.js"
+    "revision": "02cf90ef531f5ac624969cf127d09a16",
+    "url": "/static/media/birdGood.02cf90ef.png"
   },
   {
     "revision": "1e608733c391bc6fbc29a78c364f17a5",
@@ -120,7 +128,7 @@ self.__precacheManifest = [
     "url": "/static/css/1.9c897223.chunk.css"
   },
   {
-    "revision": "363d8028b6b1d4126d2224fc23745118",
+    "revision": "5efdfca0a9ecb74819167aedf5114fb6",
     "url": "/index.html"
   }
 ];

@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 class Avatar extends Component {
   render() {
     return (
-      <div>
+      <div className="main">
         <div>
         <Link to="/genres">
         <img

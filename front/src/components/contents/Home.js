@@ -30,7 +30,7 @@ class home extends Component {
           </button>
         </Link>
         <br />
-        <Link to="/login">
+        <Link to="/signup">
           <button className="Rectangle">
             <span className="Mi-cuenta">Mi cuenta</span>
           </button>

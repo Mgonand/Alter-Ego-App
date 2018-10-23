@@ -30,7 +30,7 @@ class Enigma extends Component {
 
   render() {
     return (
-      <div className="enigma">
+      <div className="main enigma">
         <img
           className="enigmaImg"
           src={require("../../enigma.png")}

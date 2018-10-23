@@ -18,7 +18,7 @@ class Contents extends Component {
 
   render() {
     return (
-      <div>
+      <div className="main">
         <img
         onClick={()=>{this.props.logout()}}
             className="Shape"

@@ -56,7 +56,7 @@ class genres extends Component {
 
   render() {
     return (
-      <div className="container">
+      <div className=" main container">
        <Link to="/questions">
       <img
             className="prev"

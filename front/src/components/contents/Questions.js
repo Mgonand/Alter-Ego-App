@@ -30,7 +30,7 @@ class questions extends Component {
   render() {
     let { first, second, third} = this.state;
     return (
-      <div>
+      <div className="main">
         <Link to="/setup">
         <img
             className="prev"

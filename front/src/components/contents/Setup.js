@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 class setup extends Component {
   render() {
     return (
-      <div>
+      <div className="main">
         <img
             className="Shape"
             src={require("../../settings.png")}

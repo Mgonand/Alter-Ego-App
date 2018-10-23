@@ -20,7 +20,7 @@ class BadEnd extends Component {
   };
   render() {
     return (
-      <div>
+      <div className="main">
         {this.renderRedirect()}
         <h2 className="saltar" onClick={() => this.props.next(8)}>Saltar</h2>
         <img className="enigmaImg" src={require('../../badEnding.png')} alt="alt"/>
